@@ -3,6 +3,10 @@ import streamlit as st
 #from snowflake.snowpark.context import get_active_session --- removed
 from snowflake.snowpark.functions import col
 
+# New section to display smothiefroot nutrition info
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
 
 
 # Write directly to the app
